@@ -1,63 +1,12 @@
 # GeneralHttpCoreHub
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.0.
+GeneralHttpCoreHub es una librería de ejemplo incluida en el proyecto Arquitectura-Front.(https://github.com/GonzaloCarmenado/Arquitectura-Front)
 
-## Code scaffolding
+El objetivo de esta librería es unificar todas las llamadas HTTP comunes (GET, POST, PUT, PATCH, etc.), agrupándolas para enviar y recibir datos de una API de forma ordenada y estandarizada.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+⚠️ Advertencia:
+Esta librería no tiene una finalidad real ni está pensada para ser usada en producción. Forma parte únicamente de un ejemplo didáctico sobre cómo estructurar una arquitectura frontend.
 
-```bash
-ng generate component component-name
-```
+No se recomienda su uso en proyectos reales, ya que incluye ejemplos de malas prácticas, errores forzados y comportamientos incorrectos diseñados intencionadamente para mostrar qué no se debe hacer.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the library, run:
-
-```bash
-ng build general-http-core-hub
-```
-
-This command will compile your project, and the build artifacts will be placed in the `dist/` directory.
-
-### Publishing the Library
-
-Once the project is built, you can publish your library by following these steps:
-
-1. Navigate to the `dist` directory:
-   ```bash
-   cd dist/general-http-core-hub
-   ```
-
-2. Run the `npm publish` command to publish your library to the npm registry:
-   ```bash
-   npm publish
-   ```
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Si estás interesado en comprender la arquitectura propuesta, puedes explorar el proyecto completo en el repositorio de GitHub mencionado arriba.
