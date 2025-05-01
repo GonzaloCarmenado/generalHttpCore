@@ -1,5 +1,5 @@
-export interface StandarResponse {
+export interface StandarResponse<T> {
     status: number;
     message: string;
-    data: any;
-}
+    data: T;
+  }

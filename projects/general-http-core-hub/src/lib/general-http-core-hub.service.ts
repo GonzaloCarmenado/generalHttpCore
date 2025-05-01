@@ -22,7 +22,7 @@ export class GeneralHttpCoreHubService {
    * @return {*}  {Promise<StandarResponse>}
    * @memberof GeneralHttpCoreHubService
    */
-  public commonGet(uri: string): Promise<StandarResponse> {
+  public commonGet<T>(uri: string): Promise<StandarResponse<T>> {
     return new Promise((resolve, reject) => {
       this.httpClient
         .get(uri, {
@@ -40,7 +40,7 @@ export class GeneralHttpCoreHubService {
     });
   }
 
-  public commonPost(uri: string, body: any): Promise<StandarResponse> {
+  public commonPost<T>(uri: string, body: any): Promise<StandarResponse<T>> {
     return new Promise((resolve, reject) => {
       this.httpClient
         .post(uri, body, {
@@ -67,11 +67,11 @@ export class GeneralHttpCoreHubService {
    * @return {*}  {StandarResponse}
    * @memberof GeneralHttpCoreHubService
    */
-  private generateStandarResponseData(data: HttpResponse<any>): StandarResponse {
+  private generateStandarResponseData<T>(data: HttpResponse<T>): StandarResponse<T> {
     return {
       status: data.status,
       message: data.statusText,
-      data: data.body
+      data: data.body as T
     };
 
   }
