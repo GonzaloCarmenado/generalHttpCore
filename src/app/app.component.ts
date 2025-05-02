@@ -21,15 +21,22 @@ export class AppComponent {
   }
 
   public testPost(): void {
-    this.generalService.commonPost('https://68133ebe129f6313e210adc8.mockapi.io/api/v1/clients',this.generateClientPost()).then(
+    this.generalService.commonPost('https://68133ebe129f6313e210adc8.mockapi.io/api/v1/clients',this.generateClientPostPut()).then(
       (respuesta) => {
         console.log(respuesta)
       })
   }
 
-  public generateClientPost():ClientModel{
+  public testPut(): void {
+    this.generalService.commonPut('https://68133ebe129f6313e210adc8.mockapi.io/api/v1/clients/2',this.generateClientPostPut()).then(
+      (respuesta) => {
+        console.log(respuesta)
+      })
+  }
+
+  public generateClientPostPut():ClientModel{
     return {
-      id: "1",
+      id: "2",
       createdAt: "2024-12-01T10:32:45Z",
       name: "Lucía Ortega",
       avatar: "https://i.pravatar.cc/150?img=1",

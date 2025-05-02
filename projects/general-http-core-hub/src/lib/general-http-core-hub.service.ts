@@ -58,6 +58,24 @@ export class GeneralHttpCoreHubService {
     });
   }
 
+  public commonPut<T>(uri: string, body: any): Promise<StandarResponse<T>> {
+    return new Promise((resolve, reject) => {
+      this.httpClient
+        .put(uri, body, {
+          headers: this.headerServices.createHeaders(),
+          observe: 'response'
+        })
+        .subscribe({
+          next: (response: HttpResponse<any>) => {
+            resolve(this.generateStandarResponseData(response));
+          },
+          error: (error) => {
+            reject(error);
+          }
+        });
+    });
+  }
+
   /**
    * Se encarga de gestionar la respuesta que recibe del back y la transforma en un objeto StandarResponse. Este objeto es el que se devuelve al componente que ha llamado al servicio. De esta manera, todas las repsuestas siempre serán iguales.
    * En caso de que tuviesemos una API que no siga el estandar de respuesta, se podria transformar el objeto en este método. Por ejemplo, si la API devuelve un objeto con una propiedad "data" que contiene el objeto que nos interesa,
