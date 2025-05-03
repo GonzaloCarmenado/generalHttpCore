@@ -8,6 +8,9 @@
     "paths": {
       "general-http-core-hub": [
         "./dist/general-http-core-hub"
+      ],
+      "general-http-interceptor": [
+        "./dist/general-http-interceptor"
       ]
     },
     "noImplicitOverride": true,
