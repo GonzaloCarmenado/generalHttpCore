@@ -6,14 +6,8 @@ export class HeaderHttpCoreHubService {
 
     public createHeaders(): HttpHeaders {
       return new HttpHeaders({
-        'Authorization': `${this.getToken()}`,
         'X-Custom-Header': 'MiHeader',
         'X-Custom-Header2': 'MiHeader2'
       });
     }
-  
-    private getToken(): string {
-      return localStorage.getItem('token') || '';
-    }
-  
 }
