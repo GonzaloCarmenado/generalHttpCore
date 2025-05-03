@@ -34,6 +34,13 @@ export class AppComponent {
       })
   }
 
+  public testDelete(): void {
+    this.generalService.commonDelete('https://68133ebe129f6313e210adc8.mockapi.io/api/v1/clients/3').then(
+      (respuesta) => {
+        console.log(respuesta)
+      })
+  }
+
   public generateClientPostPut():ClientModel{
     return {
       id: "2",
