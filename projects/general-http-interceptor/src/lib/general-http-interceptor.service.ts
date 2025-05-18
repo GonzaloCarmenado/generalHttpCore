@@ -4,7 +4,6 @@ import { catchError, finalize, Observable, throwError } from 'rxjs';
 
 
 export const GeneralHttpInterceptorService: HttpInterceptorFn = (req: HttpRequest<any>, next: HttpHandlerFn): Observable<HttpEvent<any>> => {
-  debugger
   req = req.clone({
     headers: req.headers.set('Authorization', 'Tu token aqui')
   });
